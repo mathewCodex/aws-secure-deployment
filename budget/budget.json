@@ -1,0 +1,21 @@
+{
+	"BudgetName": "webstack-monthly-budget",
+	"BudgetLimit": {
+		"Amount": "10",
+		"Unit": "USD"
+		},
+	"TimeUnit": "MONTHLY",
+	"BudgetType": "COST",
+	"CostTypes": {
+		"IncludeTax": true,
+		"IncludeSubscription": true,
+		"UseBlended": false,
+		"IncludeRefund": true,
+		"IncludeCredit": true,
+		"IncludeUpfront": true,
+		"IncludeRecurring": true,
+		"IncludeOtherSubscription": true,
+		"IncludeSupport": true,
+		"IncludeDiscount": true
+	}
+}

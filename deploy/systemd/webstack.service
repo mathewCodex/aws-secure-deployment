@@ -1,0 +1,23 @@
+[Unit]
+Description=Gunicorn application server for WebStack
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=webstack
+Group=www-data
+WorkingDirectory=/opt/webstack
+EnvironmentFile=/etc/webstack/webstack.env
+RuntimeDirectory=gunicorn
+RuntimeDirectoryMode=0750
+UMask=0007
+ExecStart=/opt/webstack/venv/bin/gunicorn --workers 2 --bind unix:/run/gunicorn/webstack.sock --access-logfile - --error-logfile - --no-control-socket app:app
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=20
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

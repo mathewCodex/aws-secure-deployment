@@ -1,0 +1,24 @@
+# Credentials and generated local state
+*.pem
+*.key
+*.rendered.sh
+.env
+.env.*
+*.env
+credentials
+aws-credentials
+infra/.state
+infra/.state.*
+budget/.state
+budget/.state.*
+*.secret.json
+
+# Local development artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Evidence is kept locally until scrubbed and intentionally selected
+/docs/evidence/*
+!/docs/evidence/README.md
